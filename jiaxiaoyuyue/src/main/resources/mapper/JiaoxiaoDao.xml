@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.JiaoxiaoDao">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        a.id as id
+        ,a.jiaoxiao_name as jiaoxiaoName
+        ,a.jiaoxiao_photo as jiaoxiaoPhoto
+        ,a.jiaoxiao_types as jiaoxiaoTypes
+        ,a.jiaoxiao_content as jiaoxiaoContent
+        ,a.jiaoxiao_delete as jiaoxiaoDelete
+        ,a.insert_time as insertTime
+        ,a.create_time as createTime
+    </sql>
+    <select id="selectListView" parameterType="map" resultType="com.entity.view.JiaoxiaoView" >
+        SELECT
+        <include refid="Base_Column_List" />
+        <!-- 级联表的字段 -->
+
+        FROM jiaoxiao  a
+
+        <where>
+            <if test="params.ids != null">
+                and a.id in
+                <foreach item="item" index="index" collection="params.ids" open="(" separator="," close=")">
+                #{item}
+                </foreach>
+            </if>
+            <if test=" params.jiaoxiaoName != '' and params.jiaoxiaoName != null and params.jiaoxiaoName != 'null' ">
+                and a.jiaoxiao_name like CONCAT('%',#{params.jiaoxiaoName},'%')
+            </if>
+            <if test="params.jiaoxiaoTypes != null and params.jiaoxiaoTypes != ''">
+                and a.jiaoxiao_types = #{params.jiaoxiaoTypes}
+            </if>
+            <if test=" params.jiaoxiaoContent != '' and params.jiaoxiaoContent != null and params.jiaoxiaoContent != 'null' ">
+                and a.jiaoxiao_content like CONCAT('%',#{params.jiaoxiaoContent},'%')
+            </if>
+            <if test="params.jiaoxiaoDeleteStart != null and params.jiaoxiaoDeleteStart != ''">
+                <![CDATA[  and a.jiaoxiao_delete >= #{params.jiaoxiaoDeleteStart}   ]]>
+            </if>
+            <if test="params.jiaoxiaoDeleteEnd != null and params.jiaoxiaoDeleteEnd != ''">
+                <![CDATA[  and a.jiaoxiao_delete <= #{params.jiaoxiaoDeleteEnd}   ]]>
+            </if>
+             <if test="params.jiaoxiaoDelete != null and params.jiaoxiaoDelete != ''">
+                and a.jiaoxiao_delete = #{params.jiaoxiaoDelete}
+             </if>
+            <if test=" params.insertTimeStart != '' and params.insertTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.insert_time) >= UNIX_TIMESTAMP(#{params.insertTimeStart}) ]]>
+            </if>
+            <if test=" params.insertTimeEnd != '' and params.insertTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.insert_time) <= UNIX_TIMESTAMP(#{params.insertTimeEnd}) ]]>
+            </if>
+            <if test="params.insertTime != null and params.insertTime != ''">
+                and a.insert_time = #{params.insertTime}
+            </if>
+
+        </where>
+        order by a.${params.sort} ${params.order}
+    </select>
+
+</mapper>

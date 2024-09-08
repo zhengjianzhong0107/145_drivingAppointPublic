@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#71A842",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "我的公告通知",
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni"
+  }
+}

@@ -1,0 +1,396 @@
+{
+	"pages": [{
+		"path": "pages/login/login",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "登录"
+		}
+	},{
+		"path": "pages/register/register",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "注册"
+		}
+	},{
+		"path": "pages/forget/forget",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "忘记密码"
+		}
+		},
+		{
+		"path": "pages/changepassword/changepassword",
+		"style": {
+		"navigationBarBackgroundColor": "#71A842",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "修改密码"
+			}
+		},
+		{
+		"path": "pages/center/center",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的"
+		}
+	},{
+		"path": "pages/user-info/userinfo",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "用户信息"
+		}
+	}
+
+       ,{
+		"path": "pages/forum/forum-index",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "全部发帖"
+		}
+	},{
+		"path": "pages/forum/forum-detail",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "发帖详情"
+		}
+	},{
+		"path": "pages/forum/forum-my",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的发帖"
+		}
+	},{
+		"path": "pages/forum/forum-add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "发贴(修改/新增)"
+		}
+	}
+	,{
+		"path": "pages/jiaolian/list",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练展示"
+		}
+	},{
+		"path": "pages/jiaolian/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的教练"
+		}
+	},{
+		"path": "pages/jiaolian/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练添加/修改"
+		}
+	},{
+		"path": "pages/jiaolian/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练详情"
+		}
+	}
+	,{
+		"path": "pages/jiaolianCollection/list",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练收藏展示"
+		}
+	},{
+		"path": "pages/jiaolianCollection/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的教练收藏"
+		}
+	},{
+		"path": "pages/jiaolianCollection/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练收藏添加/修改"
+		}
+	},{
+		"path": "pages/jiaolianCollection/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练收藏详情"
+		}
+	}
+	,{
+		"path": "pages/jiaolianLiuyan/list",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练留言展示"
+		}
+	},{
+		"path": "pages/jiaolianLiuyan/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的教练留言"
+		}
+	},{
+		"path": "pages/jiaolianLiuyan/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练留言添加/修改"
+		}
+	},{
+		"path": "pages/jiaolianLiuyan/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练留言详情"
+		}
+	}
+	,{
+		"path": "pages/jiaolianYuyue/list",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练预约展示"
+		}
+	},{
+		"path": "pages/jiaolianYuyue/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的教练预约"
+		}
+	},{
+		"path": "pages/jiaolianYuyue/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练预约添加/修改"
+		}
+	},{
+		"path": "pages/jiaolianYuyue/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "教练预约详情"
+		}
+	}
+	,{
+		"path": "pages/jiaoxiao/list",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "驾校信息展示"
+		}
+	},{
+		"path": "pages/jiaoxiao/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的驾校信息"
+		}
+	},{
+		"path": "pages/jiaoxiao/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "驾校信息添加/修改"
+		}
+	},{
+		"path": "pages/jiaoxiao/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "驾校信息详情"
+		}
+	}
+	,{
+		"path": "pages/kaoshix/list",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "考试通知展示"
+		}
+	},{
+		"path": "pages/kaoshix/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的考试通知"
+		}
+	},{
+		"path": "pages/kaoshix/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "考试通知添加/修改"
+		}
+	},{
+		"path": "pages/kaoshix/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "考试通知详情"
+		}
+	}
+	,{
+		"path": "pages/kaoshixYuyue/list",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "考试预约展示"
+		}
+	},{
+		"path": "pages/kaoshixYuyue/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的考试预约"
+		}
+	},{
+		"path": "pages/kaoshixYuyue/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "考试预约添加/修改"
+		}
+	},{
+		"path": "pages/kaoshixYuyue/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "考试预约详情"
+		}
+	}
+	,{
+		"path": "pages/news/list",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "公告通知展示"
+		}
+	},{
+		"path": "pages/news/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的公告通知"
+		}
+	},{
+		"path": "pages/news/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "公告通知添加/修改"
+		}
+	},{
+		"path": "pages/news/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "公告通知详情"
+		}
+	}
+	,{
+		"path": "pages/yonghu/list",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学员展示"
+		}
+	},{
+		"path": "pages/yonghu/list2",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的学员"
+		}
+	},{
+		"path": "pages/yonghu/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学员添加/修改"
+		}
+	},{
+		"path": "pages/yonghu/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "学员详情"
+		}
+	}
+			,{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarBackgroundColor": "#71A842",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "驾校预约平台首页"
+		}
+	}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "驾校预约平台",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#FFFFFF",
+		"selectedColor": "#fff",
+		"borderStyle": "black",
+		"backgroundColor": "#54C0CC",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabs/index.png",
+				"selectedIconPath": "static/tabs/index1.png",
+				"text": "首页"
+			}
+			,{
+				"pagePath": "pages/jiaolian/list",
+				"iconPath": "static/tabs/type.png",
+				"selectedIconPath": "static/tabs/type1.png",
+				"text": "教练"
+			}
+			,{
+				"pagePath": "pages/kaoshix/list",
+				"iconPath": "static/tabs/type.png",
+				"selectedIconPath": "static/tabs/type1.png",
+				"text": "考试通知"
+			}
+			,{
+			 	"pagePath": "pages/forum/forum-index",
+				"iconPath": "static/tabs/order.png",
+			 	"selectedIconPath": "static/tabs/order1.png",
+				"text": "论坛"
+			}
+			,{
+				"pagePath": "pages/center/center",
+				"iconPath": "static/tabs/mine.png",
+				"selectedIconPath": "static/tabs/mine1.png",
+				"text": "我的"
+			}
+		]
+	}
+	// "permission": {
+	// 	"scope.userLocation": {
+	// 		"desc": ""
+	// 	}
+	// },
+	// "requiredPrivateInfos": ["getLocation", "chooseLocation"]
+}

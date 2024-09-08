@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.KaoshixYuyueDao">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        a.id as id
+        ,a.kaoshix_yuyue_uuid_number as kaoshixYuyueUuidNumber
+        ,a.kaoshix_id as kaoshixId
+        ,a.yonghu_id as yonghuId
+        ,a.kaoshix_yuyue_yesno_types as kaoshixYuyueYesnoTypes
+        ,a.kaoshix_yuyue_yesno_text as kaoshixYuyueYesnoText
+        ,a.create_time as createTime
+    </sql>
+    <select id="selectListView" parameterType="map" resultType="com.entity.view.KaoshixYuyueView" >
+        SELECT
+        <include refid="Base_Column_List" />
+        <!-- 级联表的字段 -->
+        ,kaoshix.kaoshix_name as kaoshixName
+        ,kaoshix.kaoshix_photo as kaoshixPhoto
+        ,kaoshix.kaoshix_types as kaoshixTypes
+        ,kaoshix.kaoshix_address as kaoshixAddress
+        ,kaoshix.kaoshix_shijian as kaoshixShijian
+        ,kaoshix.kaoshix_time as kaoshixTime
+        ,kaoshix.kaoshix_content as kaoshixContent
+        ,kaoshix.kaoshix_delete as kaoshixDelete
+        ,yonghu.yonghu_name as yonghuName
+        ,yonghu.yonghu_phone as yonghuPhone
+        ,yonghu.yonghu_id_number as yonghuIdNumber
+        ,yonghu.yonghu_photo as yonghuPhoto
+        ,yonghu.yonghu_email as yonghuEmail
+        ,yonghu.yonghu_delete as yonghuDelete
+
+        FROM kaoshix_yuyue  a
+        left JOIN kaoshix kaoshix ON a.kaoshix_id = kaoshix.id
+        left JOIN yonghu yonghu ON a.yonghu_id = yonghu.id
+
+        <where>
+            <if test="params.ids != null">
+                and a.id in
+                <foreach item="item" index="index" collection="params.ids" open="(" separator="," close=")">
+                #{item}
+                </foreach>
+            </if>
+            <if test=" params.kaoshixYuyueUuidNumber != '' and params.kaoshixYuyueUuidNumber != null and params.kaoshixYuyueUuidNumber != 'null' ">
+                and a.kaoshix_yuyue_uuid_number like CONCAT('%',#{params.kaoshixYuyueUuidNumber},'%')
+            </if>
+            <if test="params.kaoshixId != null and params.kaoshixId != ''">
+                and (
+                    a.kaoshix_id = #{params.kaoshixId}
+                )
+            </if>
+            <if test="params.yonghuId != null and params.yonghuId != ''">
+                and (
+                    a.yonghu_id = #{params.yonghuId}
+                )
+            </if>
+            <if test="params.kaoshixYuyueYesnoTypes != null and params.kaoshixYuyueYesnoTypes != ''">
+                and a.kaoshix_yuyue_yesno_types = #{params.kaoshixYuyueYesnoTypes}
+            </if>
+            <if test=" params.kaoshixYuyueYesnoText != '' and params.kaoshixYuyueYesnoText != null and params.kaoshixYuyueYesnoText != 'null' ">
+                and a.kaoshix_yuyue_yesno_text like CONCAT('%',#{params.kaoshixYuyueYesnoText},'%')
+            </if>
+
+                <!-- 判断考试通知的id不为空 -->
+            <if test=" params.kaoshixIdNotNull != '' and params.kaoshixIdNotNull != null and params.kaoshixIdNotNull != 'null' ">
+                and a.kaoshix_id IS NOT NULL
+            </if>
+            <if test=" params.kaoshixName != '' and params.kaoshixName != null and params.kaoshixName != 'null' ">
+                and kaoshix.kaoshix_name like CONCAT('%',#{params.kaoshixName},'%')
+            </if>
+            <if test="params.kaoshixTypes != null  and params.kaoshixTypes != ''">
+                and kaoshix.kaoshix_types = #{params.kaoshixTypes}
+            </if>
+
+            <if test=" params.kaoshixAddress != '' and params.kaoshixAddress != null and params.kaoshixAddress != 'null' ">
+                and kaoshix.kaoshix_address like CONCAT('%',#{params.kaoshixAddress},'%')
+            </if>
+            <if test=" params.kaoshixShijian != '' and params.kaoshixShijian != null and params.kaoshixShijian != 'null' ">
+                and kaoshix.kaoshix_shijian like CONCAT('%',#{params.kaoshixShijian},'%')
+            </if>
+            <if test=" params.kaoshixTimeStart != '' and params.kaoshixTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(kaoshix.kaoshix_time) >= UNIX_TIMESTAMP(#{params.kaoshixTimeStart}) ]]>
+            </if>
+            <if test=" params.kaoshixTimeEnd != '' and params.kaoshixTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(kaoshix.kaoshix_time) <= UNIX_TIMESTAMP(#{params.kaoshixTimeEnd}) ]]>
+            </if>
+            <if test="params.kaoshixTime != null and params.kaoshixTime != ''">
+                and a.kaoshix_time = #{params.kaoshixTime}
+            </if>
+            <if test=" params.kaoshixContent != '' and params.kaoshixContent != null and params.kaoshixContent != 'null' ">
+                and kaoshix.kaoshix_content like CONCAT('%',#{params.kaoshixContent},'%')
+            </if>
+            <if test="params.kaoshixDeleteStart != null  and params.kaoshixDeleteStart != '' ">
+                <![CDATA[  and kaoshix.kaoshix_delete >= #{params.kaoshixDeleteStart}   ]]>
+            </if>
+            <if test="params.kaoshixDeleteEnd != null  and params.kaoshixDeleteEnd != '' ">
+                <![CDATA[  and kaoshix.kaoshix_delete <= #{params.kaoshixDeleteEnd}   ]]>
+            </if>
+            <if test="params.kaoshixDelete != null  and params.kaoshixDelete != '' ">
+                and kaoshix.kaoshix_delete = #{params.kaoshixDelete}
+            </if>
+            <if test=" params.insertTimeStart != '' and params.insertTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(kaoshix.insert_time) >= UNIX_TIMESTAMP(#{params.insertTimeStart}) ]]>
+            </if>
+            <if test=" params.insertTimeEnd != '' and params.insertTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(kaoshix.insert_time) <= UNIX_TIMESTAMP(#{params.insertTimeEnd}) ]]>
+            </if>
+            <if test="params.insertTime != null and params.insertTime != ''">
+                and a.insert_time = #{params.insertTime}
+            </if>
+                <!-- 判断学员的id不为空 -->
+            <if test=" params.yonghuIdNotNull != '' and params.yonghuIdNotNull != null and params.yonghuIdNotNull != 'null' ">
+                and a.yonghu_id IS NOT NULL
+            </if>
+            <if test=" params.yonghuName != '' and params.yonghuName != null and params.yonghuName != 'null' ">
+                and yonghu.yonghu_name like CONCAT('%',#{params.yonghuName},'%')
+            </if>
+            <if test=" params.yonghuPhone != '' and params.yonghuPhone != null and params.yonghuPhone != 'null' ">
+                and yonghu.yonghu_phone like CONCAT('%',#{params.yonghuPhone},'%')
+            </if>
+            <if test=" params.yonghuIdNumber != '' and params.yonghuIdNumber != null and params.yonghuIdNumber != 'null' ">
+                and yonghu.yonghu_id_number like CONCAT('%',#{params.yonghuIdNumber},'%')
+            </if>
+            <if test=" params.yonghuEmail != '' and params.yonghuEmail != null and params.yonghuEmail != 'null' ">
+                and yonghu.yonghu_email like CONCAT('%',#{params.yonghuEmail},'%')
+            </if>
+            <if test="params.yonghuDeleteStart != null  and params.yonghuDeleteStart != '' ">
+                <![CDATA[  and yonghu.yonghu_delete >= #{params.yonghuDeleteStart}   ]]>
+            </if>
+            <if test="params.yonghuDeleteEnd != null  and params.yonghuDeleteEnd != '' ">
+                <![CDATA[  and yonghu.yonghu_delete <= #{params.yonghuDeleteEnd}   ]]>
+            </if>
+            <if test="params.yonghuDelete != null  and params.yonghuDelete != '' ">
+                and yonghu.yonghu_delete = #{params.yonghuDelete}
+            </if>
+            <if test=" params.insertTimeStart != '' and params.insertTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(yonghu.insert_time) >= UNIX_TIMESTAMP(#{params.insertTimeStart}) ]]>
+            </if>
+            <if test=" params.insertTimeEnd != '' and params.insertTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(yonghu.insert_time) <= UNIX_TIMESTAMP(#{params.insertTimeEnd}) ]]>
+            </if>
+            <if test="params.insertTime != null and params.insertTime != ''">
+                and a.insert_time = #{params.insertTime}
+            </if>
+        </where>
+        order by a.${params.sort} ${params.order}
+    </select>
+
+</mapper>

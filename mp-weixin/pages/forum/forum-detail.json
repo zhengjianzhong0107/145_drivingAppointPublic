@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#71A842",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "发帖详情",
+  "usingComponents": {
+    "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "user-reply": "/components/forum-reply/forum-reply"
+  }
+}

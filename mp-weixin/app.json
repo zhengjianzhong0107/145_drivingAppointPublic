@@ -1,0 +1,106 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/register/register",
+    "pages/forget/forget",
+    "pages/changepassword/changepassword",
+    "pages/center/center",
+    "pages/user-info/userinfo",
+    "pages/forum/forum-index",
+    "pages/forum/forum-detail",
+    "pages/forum/forum-my",
+    "pages/forum/forum-add-or-update",
+    "pages/jiaolian/list",
+    "pages/jiaolian/list2",
+    "pages/jiaolian/add-or-update",
+    "pages/jiaolian/detail",
+    "pages/jiaolianCollection/list",
+    "pages/jiaolianCollection/list2",
+    "pages/jiaolianCollection/add-or-update",
+    "pages/jiaolianCollection/detail",
+    "pages/jiaolianLiuyan/list",
+    "pages/jiaolianLiuyan/list2",
+    "pages/jiaolianLiuyan/add-or-update",
+    "pages/jiaolianLiuyan/detail",
+    "pages/jiaolianYuyue/list",
+    "pages/jiaolianYuyue/list2",
+    "pages/jiaolianYuyue/add-or-update",
+    "pages/jiaolianYuyue/detail",
+    "pages/jiaoxiao/list",
+    "pages/jiaoxiao/list2",
+    "pages/jiaoxiao/add-or-update",
+    "pages/jiaoxiao/detail",
+    "pages/kaoshix/list",
+    "pages/kaoshix/list2",
+    "pages/kaoshix/add-or-update",
+    "pages/kaoshix/detail",
+    "pages/kaoshixYuyue/list",
+    "pages/kaoshixYuyue/list2",
+    "pages/kaoshixYuyue/add-or-update",
+    "pages/kaoshixYuyue/detail",
+    "pages/news/list",
+    "pages/news/list2",
+    "pages/news/add-or-update",
+    "pages/news/detail",
+    "pages/yonghu/list",
+    "pages/yonghu/list2",
+    "pages/yonghu/add-or-update",
+    "pages/yonghu/detail",
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "驾校预约平台",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#FFFFFF",
+    "selectedColor": "#fff",
+    "borderStyle": "black",
+    "backgroundColor": "#54C0CC",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabs/index.png",
+        "selectedIconPath": "static/tabs/index1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/jiaolian/list",
+        "iconPath": "static/tabs/type.png",
+        "selectedIconPath": "static/tabs/type1.png",
+        "text": "教练"
+      },
+      {
+        "pagePath": "pages/kaoshix/list",
+        "iconPath": "static/tabs/type.png",
+        "selectedIconPath": "static/tabs/type1.png",
+        "text": "考试通知"
+      },
+      {
+        "pagePath": "pages/forum/forum-index",
+        "iconPath": "static/tabs/order.png",
+        "selectedIconPath": "static/tabs/order1.png",
+        "text": "论坛"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "iconPath": "static/tabs/mine.png",
+        "selectedIconPath": "static/tabs/mine1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序将使用定位功能"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
+  "usingComponents": {}
+}
