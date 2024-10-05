@@ -11,7 +11,7 @@
 [https://www.bilibili.com/video/BV11E421N7oy/](https://www.bilibili.com/video/BV11E421N7oy/)**
 
 **毕业设计所有选题地址：
-[https://github.com/ynwynw/allProject](https://github.com/ynwynw/allProject)**
+[https://github.com/zhengjianzhong0107/allProject](https://github.com/zhengjianzhong0107/allProject)**
 
 ## 基于Java+Springboot+vue+uniapp的驾校预约小程序(源代码+数据库+15000字论文)145
 
